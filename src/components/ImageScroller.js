@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import '../styles/ImageScroller.css'; // Make sure to create an ImageScroller.css file for styling
 
 const images = [
-  './aceaudioconference/project_images/intercontinental.jpg', // Replace with your image paths
-  './aceaudioconference/project_images/metromall.jpg',
-  './aceaudioconference/project_images/mercedes.jpg',
-  './aceaudioconference/project_images/electra.jpg',
+  '/aceaudioconference/project_images/intercontinental.jpg', // Replace with your image paths
+  '/aceaudioconference/project_images/metromall.jpg',
+  '/aceaudioconference/project_images/mercedes.jpg',
+  '/aceaudioconference/project_images/electra.jpg',
 ];
 
 
