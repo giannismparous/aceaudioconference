@@ -102,7 +102,7 @@ function Projects() {
           <link rel="canonical" href="/projects"/>
         </Helmet>
         <section className='projects-main container animate-on-scroll'>
-            <h1>About our services</h1>
+            <h1>About our projects</h1>
         </section>
         <section className='projects-info container animate-on-scroll'>
           <p>Our commitment to delivering top-quality audio products is made possible through our esteemed partnerships with renowned providers like Fonestar, Bosch, Sonos, and Tutondo. These industry leaders share our passion for exceptional sound experiences and innovation. Fonestar, with its decades of expertise, brings us cutting-edge audio solutions, while Bosch's reputation for precision engineering ensures our customers enjoy unparalleled reliability. Sonos, a household name in the world of wireless speakers and smart audio, empowers us to offer state-of-the-art sound systems. Tutondo, known for its excellence in public address systems, helps us meet the diverse needs of our clientele. Together with these trusted providers, we're dedicated to elevating your audio experience to new heights.</p>

@@ -14,7 +14,6 @@
     max-width: 1200px; /* Adjust this value to control the width of the container */
     border-radius: 8px; /* Slightly rounded corners for a modern look */
     margin-top: 20px;
-    margin-bottom: 20px;
   }
 
   /* Apply the container class to each section */
@@ -22,6 +21,7 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   border-color: #3498db;
   border-style: solid;
+  margin-top: 100px;
 }
 
 .products-containers-container {
