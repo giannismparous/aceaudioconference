@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/aceaudioconference/static/css/main.a2991243.css",
-    "main.js": "/aceaudioconference/static/js/main.9d4154c5.js",
+    "main.js": "/aceaudioconference/static/js/main.2b1e43c9.js",
     "static/js/453.5cd6cdf8.chunk.js": "/aceaudioconference/static/js/453.5cd6cdf8.chunk.js",
     "index.html": "/aceaudioconference/index.html",
     "main.a2991243.css.map": "/aceaudioconference/static/css/main.a2991243.css.map",
-    "main.9d4154c5.js.map": "/aceaudioconference/static/js/main.9d4154c5.js.map",
+    "main.2b1e43c9.js.map": "/aceaudioconference/static/js/main.2b1e43c9.js.map",
     "453.5cd6cdf8.chunk.js.map": "/aceaudioconference/static/js/453.5cd6cdf8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a2991243.css",
-    "static/js/main.9d4154c5.js"
+    "static/js/main.2b1e43c9.js"
   ]
 }
