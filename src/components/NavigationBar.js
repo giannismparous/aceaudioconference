@@ -2,20 +2,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { useMediaQuery } from 'react-responsive'; // Import media query hook
 import Hamburger from 'hamburger-react'; // Import Hamburger component
 import "../styles/NavigationBar.css";
 
-const hermesViewWhiteImgPath = '../icons/hermes-view-logo-new-white.png';
-const hermesViewBlueImgPath = '../icons/hermes-view-logo-new-blue.png';
-const hermesViewImg = '../icons/hermes-view-logo.png';
 
 const NavigationBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [logoIsHovered, setLogoIsHovered] = useState(false);
 
   const isMobile = useMediaQuery({ maxWidth: 768 }); // Check if screen width is <= 768px
   const isMobile2 = useMediaQuery({ maxWidth: 450 }); // Check if screen width is <= 768px
@@ -39,14 +35,6 @@ const NavigationBar = () => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-  };
-
-  const handleMouseEnterLogo = () => {
-    setLogoIsHovered(true);
-  };
-  
-  const handleMouseLeaveLogo = () => {
-    setLogoIsHovered(false);
   };
 
   const toggleMenu = () => {
