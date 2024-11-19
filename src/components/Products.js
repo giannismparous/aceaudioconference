@@ -16,113 +16,113 @@ export const productList1 = [
   {
     id: 2,
     name: 'IP PA SYSTEMS',
-    image: '/aceaudioconference/product_images/IP_PA_SYSTEMS.png',
+    image: process.env.PUBLIC_URL +'/product_images/IP_PA_SYSTEMS.png',
     info: ''
   },
   {
     id: 3,
     name: 'PAGING MIC',
-    image: '/aceaudioconference/product_images/PAGING_MIC.jpg',
+    image: process.env.PUBLIC_URL +'//product_images/PAGING_MIC.jpg',
     info: "<p>These paging microphones are designed as a plug-and-play paging solution to work in combination with the AUDAC multi-zone audio matrixes.</p><br>-Push to talk button <br>-Audio transmission via Dante™/AES67 <br>-Fully flexible & configurable touchscreen (from AUDAC Touch™) <br>-Visual user feedback (LED’s) <br>-48V phantom power & XLR input that allows the use of various microphones <br>-PoE powered"
   },
   {
     id: 4,
     name: 'MIXER AMPLIFIERS',
-    image: '/aceaudioconference/product_images/MIXER_AMPLIFIERS.jpg', 
+    image: process.env.PUBLIC_URL +'/product_images/MIXER_AMPLIFIERS.jpg', 
     info: "<p>A mixing console or mixing desk is an electronic device for mixing audio signals, used in sound recording and reproduction and sound reinforcement systems. Inputs to the console include microphones, signals from electric or electronic instruments, or recorded sounds. Mixers may control analog or digital signals. The modified signals are summed to produce the combined output signals, which can then be broadcast, amplified through a sound reinforcement system or recorded.</p><p>Mixing consoles are used for applications including recording studios, public address systems, sound reinforcement systems, nightclubs, broadcasting, and post-production. A typical, simple application combines signals from microphones on stage into an amplifier that drives one set of loudspeakers for the audience. A DJ mixer may have only two channels, for mixing two record players. A coffeehouse's tiny stage might only have a six-channel mixer, enough for two singer-guitarists and a percussionist. A nightclub stage's mixer for rock music shows may have 24 channels for mixing the signals from a rhythm section, lead guitar and several vocalists. A mixing console in a professional recording studio may have as many as 96 channels.</p><p>In practice, mixers do more than simply mix signals. They can provide phantom power for condenser microphones; pan control, which changes a sound\'s apparent position in the stereo soundfield; filtering and equalization, which enables sound engineers to boost or cut selected frequencies to improve the sound; dynamic range compression, which allows engineers to increase the overall gain of the system or channel without exceeding the dynamic limits of the system; routing facilities, to send the signal from the mixer to another device, such as a sound recording system or a control room; and monitoring facilities, whereby one of a number of sources can be routed to loudspeakers or headphones for listening, often without affecting the mixer\'s main output.[2] Some mixers have onboard electronic effects, such as reverb. Some mixers intended for small venue live performance applications may include an integrated power amplifier.</p>"
   },
   {
     id: 5,
     name: 'STEREO WALL AMPLIFIER',
-    image: '/aceaudioconference/product_images/STEREO_WALL_AMPLIFIER.jpg', 
+    image: process.env.PUBLIC_URL +'/product_images/STEREO_WALL_AMPLIFIER.jpg', 
     info: ""
   },
   {
     id: 6,
     name: 'WIRELESS CONFERENCE SYSTEM',
-    image: '/aceaudioconference/product_images/WIRELESS_CONFERENCE_SYSTEM.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/WIRELESS_CONFERENCE_SYSTEM.jpg', // Replace with the actual image path
   },
   {
     id: 7,
     name: 'DIGITAL CONFERENCE SYSTEM',
-    image: '/aceaudioconference/product_images/DIGITAL_CONFERENCE_SYSTEM.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/DIGITAL_CONFERENCE_SYSTEM.jpg', // Replace with the actual image path
   },
   {
     id: 8,
     name: 'SIMULTANEOUS TRANSLATION SYSTEM',
-    image: '/aceaudioconference/product_images/SIMULTANEOUS_TRANSLATION_SYSTEM.png', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/SIMULTANEOUS_TRANSLATION_SYSTEM.png', // Replace with the actual image path
   },
   {
     id: 9,
     name: 'CEILING SPEAKERS',
-    image: '/aceaudioconference/product_images/CEILING_SPEAKERS.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/CEILING_SPEAKERS.jpg', // Replace with the actual image path
   },
   {
     id: 10,
     name: 'ON WALL  SPEAKERS',
-    image: '/aceaudioconference/product_images/ON_WALL_SPEAKERS.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/ON_WALL_SPEAKERS.jpg', // Replace with the actual image path
   },
   {
     id: 11,
     name: 'WALL SUBWOOFER ',
-    image: '/aceaudioconference/product_images/WALL_SUBWOOFER.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/WALL_SUBWOOFER.jpg', // Replace with the actual image path
   }]
 
 export const productList2=[
   {
     id: 12,
     name: 'SOUND PROJECTORS',
-    image: '/aceaudioconference/product_images/SOUND_PROJECTORS.png', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/SOUND_PROJECTORS.png', // Replace with the actual image path
   },
   {
     id: 13,
     name: 'MUSIC HORNS',
-    image: '/aceaudioconference/product_images/MUSIC_HORNS.png', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/MUSIC_HORNS.png', // Replace with the actual image path
   },
   {
     id: 14,
     name: 'WIRELESS MICS',
-    image: '/aceaudioconference/product_images/WIRELESS_MICS.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/WIRELESS_MICS.jpg', // Replace with the actual image path
   },
   {
     id: 15,
     name: 'MULTI ROOM SYSTEMS MOBILE AND PC  WIFI   CONTROLLED',
-    image: '/aceaudioconference/product_images/MULTI_ROOM_SYSTEMS_MOBILE.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/MULTI_ROOM_SYSTEMS_MOBILE.jpg', // Replace with the actual image path
   },
   {
     id: 16,
     name: 'ON WALL CONTROLLER',
-    image: '/aceaudioconference/product_images/ON_WALL_CONTROLLER.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/ON_WALL_CONTROLLER.jpg', // Replace with the actual image path
   },
   {
     id: 17,
     name: 'MULTI LEARNING INFRARED REMOTE CONTROL',
-    image: '/aceaudioconference/product_images/MULTI_LEARNING_INFRARED.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/MULTI_LEARNING_INFRARED.jpg', // Replace with the actual image path
   },
   {
     id: 18,
     name: 'SONOS AMP',
-    image: '/aceaudioconference/product_images/SONOS_AMP.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/SONOS_AMP.jpg', // Replace with the actual image path
   },
   {
     id: 19,
     name: 'SONOS PLAY 5 SPEAKERS',
-    image: '/aceaudioconference/product_images/SONOS_PLAY_5_SPEAKERS.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/SONOS_PLAY_5_SPEAKERS.jpg', // Replace with the actual image path
   },
   {
     id: 20,
     name: 'SONOS PLAY ONE SPEAKERS',
-    image: '/aceaudioconference/product_images/SONOS_PLAY_ONE_SPEAKERS.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/SONOS_PLAY_ONE_SPEAKERS.jpg', // Replace with the actual image path
   },
   {
     id: 21,
     name: 'SONOS BEAM SPEAKER',
-    image: '/aceaudioconference/product_images/SONOS_BEAM_SPEAKER.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/SONOS_BEAM_SPEAKER.jpg', // Replace with the actual image path
   },
   {
     id: 22,
     name: 'BOSH EN PLENA SYSTEM',
-    image: '/aceaudioconference/product_images/BOSH_EN_PLENA_SYSTEM.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/product_images/BOSH_EN_PLENA_SYSTEM.jpg', // Replace with the actual image path
   },
 ];
 
@@ -130,25 +130,25 @@ const providersList=[
   {
     id:1,
     name: 'FONESTAR',
-    image:"/aceaudioconference/providers_images/fonestar.jpg",
+    image: process.env.PUBLIC_URL +"/providers_images/fonestar.jpg",
     link:"https://fonestar.com/en/"
   },
   {
     id:2,
     name: 'TUTONDO',
-    image:"/aceaudioconference/providers_images/tutondo.jpg",
+    image:process.env.PUBLIC_URL +"/providers_images/tutondo.jpg",
     link:"https://www.tutondo.com/"
   },
   {
     id:3,
     name: 'SONOS',
-    image:"/aceaudioconference/providers_images/sonos.jpg",
+    image:process.env.PUBLIC_URL +"/providers_images/sonos.jpg",
     link:"https://www.sonos.com/en/home"
   },
   {
     id:4,
     name: 'BOSCH',
-    image:"/aceaudioconference/providers_images/bosch.jpg",
+    image:process.env.PUBLIC_URL +"/providers_images/bosch.jpg",
     link:"https://www.bosch-home.gr/"
   },
 ]
