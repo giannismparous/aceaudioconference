@@ -18,7 +18,7 @@ function Home() {
           <ImageScroller />
           <section className="welcome container animate-on-scroll">
             <h1>Welcome to ACE Audio & Conference Ltd.</h1>
-            <p>The best of sound technology is here. With 18 years of experience in audio-conference-projecting installations, we bring quality and expertise to every project.</p>
+            <p>The best of sound technology is here. With 25 years of experience in audio-conference-projecting installations, we bring quality and expertise to every project.</p>
           </section>
         <section className="services container animate-on-scroll">
           <div className="centered-header">

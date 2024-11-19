@@ -110,7 +110,7 @@ function Projects() {
         <div className='full-width-bg-colored'>
           <section className='projects-info container animate-on-scroll'>
             <div className='centered-header'>
-              <h2>Projects</h2>
+              <h2>Some of our projects</h2>
             </div>
             <div className="projects-containers-container animate-on-scroll">
                 <div className="projects-container1">
