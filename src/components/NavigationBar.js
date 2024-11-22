@@ -42,7 +42,12 @@ const NavigationBar = () => {
   };
 
   return (
-    <nav className="navbar" style={{ backgroundColor: (isHovered || (isMobile && menuOpen)) ? 'rgb(23,20,38)' : scrollPosition === 0 ? 'transparent' : 'rgba(23,20,38,0.9)' }} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <nav className="navbar" style={{
+      backgroundColor:
+        (isHovered || (isMobile && menuOpen)) ? 'rgb(23,20,38)' :
+        (isMobile && scrollPosition === 0) ? 'rgba(23,20,38,0.9)' :
+        scrollPosition === 0 ? 'transparent' : 'rgba(23,20,38,0.9)'
+    }} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       {isMobile ? (
         <div className="nav-bar-items-container">
           {/* <Link to="/" className="hermesview-link">

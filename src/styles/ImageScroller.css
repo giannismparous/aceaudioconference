@@ -4,6 +4,15 @@
   overflow: hidden;
   position: relative;
   background-color: rgb(107, 110, 110);
+  aspect-ratio: 2 / 1;
+  /* Set the aspect ratio based on your original dimensions (1000px width to 500px height) */
+}
+
+@media screen and (max-width: 1000px) {
+  .image-scroller {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .image {
@@ -11,17 +20,21 @@
   background-position: center;
   position: absolute;
   top: 0;
-  left: 0; /* All images start from the left */
+  left: 0;
+  /* All images start from the left */
   width: 100vw;
   height: 100%;
   transition: transform 1s ease-in-out;
-  transform: translateX(-100%); /* Images are initially off-screen to the left */
+  transform: translateX(-100%);
+  /* Images are initially off-screen to the left */
 }
 
 .image.active {
-  transform: translateX(0); /* Active image slides into view */
+  transform: translateX(0);
+  /* Active image slides into view */
 }
 
 .image:not(.active) {
-  transform: translateX(100%); /* Non-active images slide out to the right */
+  transform: translateX(100%);
+  /* Non-active images slide out to the right */
 }

@@ -1,137 +1,167 @@
 body {
   background-color: #ffffff;
-}  
-  
-.container {
-  padding: 20px;
-  margin-left: auto; 
-  margin-right: auto; 
-  max-width: 1200px; 
-  border-radius: 8px; 
-  margin-top: 20px;
-}
-  
-.welcome, .services, .call-to-action {
-  margin: 4em auto;
 }
 
-.centered-header{
+.container {
+  padding: 20px;
+  margin-left: 17%;
+  margin-right: 17%;
+  max-width: 1200px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+@media (max-width: 850px) {
+  .container {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+.welcome,
+.services,
+.call-to-action {}
+
+.centered-header {
   text-align: center;
 }
 
-.welcome{
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.welcome {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-color: #3498db;
   border-style: solid;
-  margin-left: 0;
-  margin-right: 0;
-  margin: 0;
+  margin-top: 50px;
 }
 
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* This will center the children horizontally */
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  section {
-    margin-bottom: 2em;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* This will center the children horizontally */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
 
-  h1 {
-    color: black;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
-    display: inline-block; /* Ensures the line is only as wide as the text */
-    margin-bottom: 1em; /* Space below the heading */
-  }
-  
-  h1::after {
-    content: '';
-    display: block;
-    width: 50px; /* Width of the decorative line */
-    height: 5px; /* Increased thickness of the line */
-    background-color: #3498db; /* Color of the line */
-    position: absolute;
-    left: 0;
-    bottom: -6px; /* Adjusted for the new thickness */
-    border-radius: 2.5px; /* Half of the height to make the ends fully rounded */
-  }
-  
-  h2 {
-    color: black;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    text-rendering: optimizeLegibility;
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
-    display: inline-block; /* Ensures the line is only as wide as the text */
-    margin-bottom: 1em; /* Space below the heading */
-  }
-  
-  h2::after {
-    content: '';
-    display: block;
-    width: 100%; /* Width of the decorative line */
-    height: 5px; /* Increased thickness of the line */
-    background-color: black;
-    position: absolute;
-    left: 0;
-    bottom: -6px; /* Adjusted for the new thickness */
-    border-radius: 2.5px; /* Half of the height to make the ends fully rounded */
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  ul li {
-    margin: 0.5em 0;
-    padding-left: 1em;
-    text-indent: -0.7em;
-  }
-  
-  .dashed-list li::before {
-    content: "— "; /* Keep the dash here */
-    color: #3498db;
-    /* ... other styles ... */
-  }
-  
-  p {
-    font-size: 1.1rem;
-    margin: 1em 0;
-  }
-  
-  .call-to-action h2 {
-    text-align: center;
-  }
-  
-  h1, h2 {
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    font-size: 40px;
+section {
+  margin-bottom: 2em;
+}
 
-  }
-  
-  p {
-    text-rendering: optimizeSpeed;
-  }
-  
-#services_img{
+
+h1 {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  /* Needed for absolute positioning of the pseudo-element */
+  display: inline-block;
+  /* Ensures the line is only as wide as the text */
+  margin-bottom: 1em;
+  /* Space below the heading */
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 50px;
+  /* Width of the decorative line */
+  height: 5px;
+  /* Increased thickness of the line */
+  background-color: #3498db;
+  /* Color of the line */
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  /* Adjusted for the new thickness */
+  border-radius: 2.5px;
+  /* Half of the height to make the ends fully rounded */
+}
+
+h2 {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  /* Needed for absolute positioning of the pseudo-element */
+  display: inline-block;
+  /* Ensures the line is only as wide as the text */
+  margin-bottom: 1em;
+  /* Space below the heading */
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  /* Width of the decorative line */
+  height: 5px;
+  /* Increased thickness of the line */
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  /* Adjusted for the new thickness */
+  border-radius: 2.5px;
+  /* Half of the height to make the ends fully rounded */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 0.5em 0;
+  padding-left: 1em;
+  text-indent: -0.7em;
+}
+
+.dashed-list li::before {
+  content: "— ";
+  /* Keep the dash here */
+  color: #3498db;
+  /* ... other styles ... */
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 1em 0;
+}
+
+.call-to-action h2 {
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 40px;
+
+}
+
+p {
+  text-rendering: optimizeSpeed;
+}
+
+#services_img {
   float: right;
   width: 450px;
   height: 450px;
 }
 
 @media (max-width: 750px) {
-  #services_img{
+  #services_img {
     float: right;
     width: 250px;
     height: 250px;
@@ -149,7 +179,34 @@ body {
   transform: translateY(0);
 }
 
-.full-width-bg-colored{
+.full-width-bg-colored {
   background-color: rgb(107, 110, 110);
 }
 
+@media screen and (max-width: 780px) {
+
+  .welcome h1,
+  .services h2,
+  .call-to-action h2 {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 516px) {
+
+  .welcome h1,
+  .services h2,
+  .call-to-action h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 323px) {
+
+  .welcome p,
+  .services p,
+  .call-to-action p {
+    font-size: 15px;
+  }
+
+}

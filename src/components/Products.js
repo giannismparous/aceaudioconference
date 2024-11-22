@@ -34,13 +34,8 @@ export const productList1 = [
   {
     id: 5,
     name: 'MULTI ROOM SYSTEMS FOR VILLAS',
-    image: process.env.PUBLIC_URL +'/new_product_images/STEREO_WALL_AMPLIFIER.jpg', 
+    image: process.env.PUBLIC_URL +'/new_product_images/multi_room_systems_for_villas.jpg', 
     info: ""
-  },
-  {
-    id: 6,
-    name: 'WIRELESS CONFERENCE SYSTEM',
-    image: process.env.PUBLIC_URL +'/new_product_images/WIRELESS_CONFERENCE_SYSTEM.jpg', // Replace with the actual image path
   },
   {
     id: 7,
@@ -83,7 +78,7 @@ export const productList2=[
   {
     id: 16,
     name: 'ON WALL REMOTE CONTROLS',
-    image: process.env.PUBLIC_URL +'/product_images/ON_WALL_CONTROLLER.jpg', // Replace with the actual image path
+    image: process.env.PUBLIC_URL +'/new_product_images/on_wall_remote_controllers.jpg', // Replace with the actual image path
   },
   {
     id: 17,
@@ -120,7 +115,7 @@ const providersList=[
     id:4,
     name: 'BOSCH',
     image:process.env.PUBLIC_URL +"/providers_images/bosch.jpg",
-    link:"https://www.bosch-home.gr/"
+    link:"https://www.boschsecurity.com/xc/en/"
   },
 ]
 
@@ -154,7 +149,6 @@ function Products() {
       <section className='products-info container animate-on-scroll'>
         <p>Discover a world of unparalleled audio excellence at Ace Audio and Conference. Whether you're a sound enthusiast, a professional musician, or a business looking to upgrade your audio equipment, we have you covered. Our extensive catalog features a wide array of audio solutions, including subwoofers that will shake your senses, powerful PA systems for crowd-thrilling performances, cutting-edge sound projectors, high-quality microphones for crystal-clear voice capture, mixer amplifiers for precise audio control, conference systems for seamless communication, premium speakers that deliver breathtaking sound, and innovative translators to bridge language barriers. With a range this diverse, finding the perfect audio solution has never been easier.</p>
         <p>At Ace Audio and Conference, we take pride in offering only the highest quality audio products. Each item in our collection undergoes rigorous testing to ensure unmatched performance and durability. Whether you're a musician seeking that perfect tone, a business aiming for flawless presentations, or an event organizer striving for top-notch sound quality, you can trust that our products will exceed your expectations. Our commitment to quality extends to every aspect of our business, from our knowledgeable customer support team ready to assist you, to our seamless online shopping experience that makes finding and purchasing the right audio equipment a breeze.</p>
-        <p>Shopping for audio equipment has never been as convenient as it is at Ace Audio and Conference. Our user-friendly website offers intuitive navigation, detailed product information, and customer reviews to help you make informed decisions. With secure payment options and prompt delivery, you can shop with confidence, knowing that your audio needs are in capable hands. Plus, our dedicated customer service team is always here to provide expert advice and assistance, ensuring that you find the perfect audio solutions tailored to your unique requirements. Experience the ease and excellence of audio shopping at Ace Audio and Conference today!</p>
       </section> 
       <div className="full-width-bg-colored">
         <section className='providers-info container animate-on-scroll'>

@@ -3,9 +3,9 @@ import '../styles/ImageScroller.css'; // Make sure to create an ImageScroller.cs
 
 const images = [
   process.env.PUBLIC_URL +'/project_images/intercontinental.jpg', // Replace with your image paths
-  process.env.PUBLIC_URL +'aceaudioconference/project_images/metromall.jpg',
-  process.env.PUBLIC_URL +'aceaudioconference/project_images/mercedes.jpg',
-  process.env.PUBLIC_URL +'aceaudioconference/project_images/electra.jpg',
+  process.env.PUBLIC_URL +'/project_images/metromall.jpg',
+  process.env.PUBLIC_URL +'/project_images/mercedes.jpg',
+  process.env.PUBLIC_URL +'/project_images/electra.jpg',
 ];
 
 

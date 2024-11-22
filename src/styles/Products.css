@@ -1,24 +1,17 @@
 .providers-list {
   display: flex;
   flex-direction: row;
-  gap: 20px; /* Adjust the space between product cards */
-  padding: 20px; /* Padding around each products container */
+  gap: 20px;
+  /* Adjust the space between product cards */
+  padding: 20px;
+  /* Padding around each products container */
   justify-content: center;
 }
-  
-  /* This class will center your content and add padding */
-  .container {
-    padding: 20px;
-    margin-left: auto; /* Ensures margin is auto-applied on the left */
-    margin-right: auto; /* Ensures margin is auto-applied on the right */
-    max-width: 1200px; /* Adjust this value to control the width of the container */
-    border-radius: 8px; /* Slightly rounded corners for a modern look */
-    margin-top: 20px;
-  }
 
-  /* Apply the container class to each section */
-.products-main{
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+/* Apply the container class to each section */
+.products-main {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-color: #3498db;
   border-style: solid;
   margin-top: 100px;
@@ -26,90 +19,176 @@
 
 .products-containers-container {
   display: flex;
-  gap: 20px; /* Adjust the space between product cards */
+  gap: 20px;
+  /* Adjust the space between product cards */
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px; /* Maximum width of the container */
+  max-width: 1200px;
+  /* Maximum width of the container */
   justify-content: center;
 }
 
 .products-container1,
 .products-container2 {
-  flex: 1; /* Both containers will take equal space */
+  flex: 1;
+  /* Both containers will take equal space */
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adjust the space between product cards */
-  padding: 20px; /* Padding around each products container */
+  gap: 20px;
+  /* Adjust the space between product cards */
+  padding: 20px;
+  /* Padding around each products container */
 }
 
 .products-container2 {
-  margin-top: 125px; /* Additional top margin for staggered effect */
+  margin-top: 125px;
+  /* Additional top margin for staggered effect */
 }
-  
-.provider-item,.product-item {
+
+.provider-item,
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center the items horizontally */
+  border: 1px solid #ddd;
+  /* A light border around each card */
+  border-radius: 8px;
+  /* Rounded corners for the card */
+  overflow: hidden;
+  /* Ensures the content fits within the card */
+  background-color: #fff;
+  /* Background color for the card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  opacity: 0;
+  /* Start with items invisible */
+  transform: translateY(20px);
+  /* Start slightly lower */
+}
+
+.provider-item a,
+.product-item a {
+  color: #0c88db;
+  text-decoration: none;
+  /* Remove underline */
+}
+
+.provider-item a:visited,
+.product-item a:visited {
+  color: black;
+  /* Default text color */
+}
+
+.provider-item a:hover,
+.provider-item a:active,
+.product-item a:hover,
+.product-item a:active {
+  color: black;
+  /* Default text color */
+}
+
+.provider-item.animate,
+.product-item.animate {
+  opacity: 1;
+  /* Full visibility */
+  transform: translateY(0);
+  /* Move to final position */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* Smooth transition for fade and movement */
+}
+
+.provider-image,
+.product-image {
+  width: 100%;
+  /* Full width of the card */
+  object-fit: cover;
+  /* Cover the image area, crop if necessary */
+  height: 200px;
+  /* Fixed height for all images */
+}
+
+@media screen and (max-width: 930px) {
+
+  .provider-image,
+  .product-image {
+    object-fit: cover;
+    /* Cover the image area, crop if necessary */
+    height: 100px;
+    /* Fixed height for all images */
+  }
+}
+
+
+.provider-name,
+.product-name {
+  padding: 10px;
+  font-size: 1.2em;
+  /* Larger text for the product name */
+  text-align: center;
+  /* Center the text */
+  margin: 10px 0;
+  /* Space above and below the product name */
+}
+
+p {
+  text-rendering: optimizeSpeed;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media screen and (max-width: 620px) {
+
+  .products-containers-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the items horizontally */
-    border: 1px solid #ddd; /* A light border around each card */
-    border-radius: 8px; /* Rounded corners for the card */
-    overflow: hidden; /* Ensures the content fits within the card */
-    background-color: #fff; /* Background color for the card */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    opacity: 0; /* Start with items invisible */
-    transform: translateY(20px); /* Start slightly lower */
+    gap: 0;
   }
 
-  .provider-item a,.product-item a{
-    color: #0c88db;
-    text-decoration: none; /* Remove underline */
+  .products-container2 {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 716px) {
+  .providers-list {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 516px) {
+
+  .products-main h1,
+  .providers-info h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 323px) {
+
+  .products-main h1,
+  .providers-info h2 {
+    font-size: 20px;
   }
 
-  .provider-item a:visited,.product-item a:visited {
-    color: black; /* Default text color */
-  }
-  
-  .provider-item a:hover, .provider-item a:active, .product-item a:hover, .product-item a:active {
-    color: black; /* Default text color */
+  .providers-info p,
+  .products-info p {
+    font-size: 15px;
   }
 
-  .provider-item.animate, .product-item.animate {
-    opacity: 1; /* Full visibility */
-    transform: translateY(0); /* Move to final position */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for fade and movement */
-  }
-  
-  .provider-image,.product-image {
-    width: 100%; /* Full width of the card */
-    object-fit: cover; /* Cover the image area, crop if necessary */
-    height: 200px; /* Fixed height for all images */
+  .products-containers-container h3 {
+    font-size: 15px;
   }
 
-  @media screen and (max-width: 930px) {
-    .provider-image,.product-image {
-      object-fit: cover; /* Cover the image area, crop if necessary */
-      height: 100px; /* Fixed height for all images */
-    }
-  }
-
-  
-  .provider-name,.product-name {
-    padding: 10px;
-    font-size: 1.2em; /* Larger text for the product name */
-    text-align: center; /* Center the text */
-    margin: 10px 0; /* Space above and below the product name */
-  }
-  
-  p {
-    text-rendering: optimizeSpeed;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+}

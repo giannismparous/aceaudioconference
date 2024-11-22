@@ -24,8 +24,8 @@ function Home() {
           <div className="centered-header">
           <h2>Our Services</h2>
           </div>
-          <p>Specializing in PA installations, multi-room installations, and enhanced sound systems, ACE Audio & Conference is at the forefront of new audio technology. We provide bespoke design and permanent installation solutions to meet all your audio needs.</p>
-          <img src='/aceaudioconference/other_images/services.jpg' alt="Services" id="services_img" ></img>
+          <p>Specializing in PA installations, multi-room installations, and enhanced sound systems, ACE Audio & Conference is at the forefront of new audio technology. We provide bespoke design and permanent installation solutions as well as studies to meet all your audio needs.</p>
+          {/* <img src='/aceaudioconference/other_images/services.jpg' alt="Services" id="services_img" ></img> */}
           <p>Our skilled technicians are equipped to handle any challenge in a variety of settings:</p>
           <ul className="dashed-list">
             <li>Buildings, both large and small</li>
