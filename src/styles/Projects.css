@@ -1,120 +1,144 @@
-/* Apply the container class to each section */
+/* ===== PROJECTS MAIN HEADER ===== */
 .projects-main {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-color: #3498db;
-  border-style: solid;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 100px;
+  margin-bottom: 0;
+  text-align: center;
 }
 
+.projects-main h1 {
+  margin-bottom: 0.5em;
+}
+
+.projects-main h1::after {
+  display: none;
+}
+
+/* ===== PROJECTS CONTAINERS ===== */
 .projects-containers-container {
   display: flex;
-  gap: 20px;
-  /* Adjust the space between product cards */
-  padding: 20px;
-  /* Padding around the entire products container */
+  gap: 24px;
+  padding: var(--spacing-xl);
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
-  /* Maximum width of the container */
   justify-content: center;
 }
 
 .projects-container1,
 .projects-container2 {
   flex: 1;
-  /* Both containers will take equal space */
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  /* Adjust the space between product cards */
+  gap: 24px;
 }
 
 .projects-container2 {
-  margin-top: 125px;
-  /* Additional top margin for staggered effect */
+  margin-top: 100px;
 }
 
+/* ===== PROJECT CARDS ===== */
 .project-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Center the items horizontally */
-  border: 1px solid #ddd;
-  /* A light border around each card */
-  border-radius: 8px;
-  /* Rounded corners for the card */
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  /* Ensures the content fits within the card */
-  background-color: #fff;
-  /* Background color for the card */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for depth */
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
   opacity: 0;
-  /* Start with items invisible */
-  transform: translateY(20px);
-  /* Start slightly lower */
+  transform: translateY(30px);
+  transition: all var(--transition-base);
+  position: relative;
 }
 
-.project-item a {
-  color: #0c88db;
-  text-decoration: none;
-  /* Remove underline */
+.project-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: var(--transition-base);
 }
 
-.project-item a:visited {
-  color: black;
+.project-item:hover::before {
+  opacity: 1;
 }
 
-.project-item a:hover,
-.project-item a:active {
-  color: black;
+.project-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
 }
 
 .project-item.animate {
   opacity: 1;
-  /* Full visibility */
   transform: translateY(0);
-  /* Move to final position */
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  /* Smooth transition for fade and movement */
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.project-item.animate:hover {
+  transform: translateY(-8px);
+}
+
+/* ===== PROJECT LINKS ===== */
+.project-item a {
+  color: var(--primary-start);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.project-item a:visited {
+  color: var(--text-primary);
+}
+
+.project-item a:hover,
+.project-item a:active {
+  color: var(--primary-end);
+}
+
+/* ===== PROJECT IMAGES ===== */
 .project-image {
   width: 100%;
-  /* Full width of the card */
   object-fit: cover;
-  /* Cover the image area, crop if necessary */
   height: 200px;
-  /* Fixed height for all images */
+  transition: var(--transition-base);
+}
+
+.project-item:hover .project-image {
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 930px) {
   .project-image {
-    object-fit: cover;
-    /* Cover the image area, crop if necessary */
-    height: 100px;
-    /* Fixed height for all images */
+    height: 120px;
   }
 }
 
+/* ===== PROJECT NAMES ===== */
 .project-name {
-  padding: 10px;
-  font-size: 1.2em;
-  /* Larger text for the product name */
+  padding: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
   text-align: center;
-  /* Center the text */
-  margin: 10px 0;
-  /* Space above and below the product name */
+  margin: 0;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
-
+/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 620px) {
-
-
   .projects-containers-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
   }
 
   .projects-container2 {
@@ -126,22 +150,20 @@
 
   .projects-main h1,
   .projects-info h2 {
-    font-size: 25px;
+    font-size: var(--font-size-xl);
   }
 }
 
 @media screen and (max-width: 323px) {
-
   .projects-main h1 {
-    font-size: 20px;
+    font-size: var(--font-size-lg);
   }
 
   .projects-info p {
-    font-size: 15px;
+    font-size: var(--font-size-sm);
   }
 
   .projects-info h2 {
-    font-size: 15px;
+    font-size: var(--font-size-sm);
   }
-
 }

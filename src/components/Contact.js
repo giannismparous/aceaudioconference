@@ -3,22 +3,23 @@ import emailjs from 'emailjs-com';
 import useScrollAnimation from './useScrollAnimation';
 import '../styles/Contact.css';
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '../context/LanguageContext';
 
 function Contact() {
   const form = useRef();
+  const scrollRef = useScrollAnimation();
+  const { t } = useLanguage();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_18yusfn', 'template_jranh97', form.current, 'bgBojYnJcq26l1FGQ')
       .then((result) => {
-          alert('Message sent successfully!');
+          alert(t('contact_success'));
       }, (error) => {
-          alert('Failed to send message, please try again.');
+          alert(t('contact_error'));
       });
   };
-
-  const scrollRef = useScrollAnimation();
 
   return (
     <div className="contact" ref={scrollRef}>
@@ -28,20 +29,20 @@ function Contact() {
           <link rel="canonical" href="/contact"/>
         </Helmet>
       <section className="contact-container container animate-on-scroll">
-        <h1>Contact ACE Audio & Conference Ltd</h1>
-        <p>Email us at aceaudioconference@gmail.com or fill out the form below:</p>
+        <h1>{t('contact_title')}</h1>
+        <p>{t('contact_desc')}</p>
         
         <form className="contact-form" ref={form} onSubmit={sendEmail}>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">{t('contact_name')}</label>
           <input type="text" id="name" name="name" required />
           
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">{t('contact_email')}</label>
           <input type="email" id="email" name="email" required />
           
-          <label htmlFor="message">Your Message:</label>
+          <label htmlFor="message">{t('contact_message')}</label>
           <textarea id="message" name="message" rows="5" required></textarea>
           
-          <button type="submit">Send Message</button>
+          <button type="submit">{t('contact_send')}</button>
         </form>
       </section>
     </div>

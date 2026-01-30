@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useScrollAnimation from './useScrollAnimation';
 import '../styles/Products.css'; 
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '../context/LanguageContext';
 
 
 
@@ -23,13 +24,13 @@ export const productList1 = [
     id: 3,
     name: 'DIGITAL CONFERENCE SYSTEMS WITH LCD & VOTE',
     image: process.env.PUBLIC_URL +'/new_product_images/DIGITAL_CONFERENCE_SYSTEMS_WITH_LCD_VOTE.jpg',
-    info: "<p>These paging microphones are designed as a plug-and-play paging solution to work in combination with the AUDAC multi-zone audio matrixes.</p><br>-Push to talk button <br>-Audio transmission via Dante™/AES67 <br>-Fully flexible & configurable touchscreen (from AUDAC Touch™) <br>-Visual user feedback (LED’s) <br>-48V phantom power & XLR input that allows the use of various microphones <br>-PoE powered"
+    info: "<p>These paging microphones are designed as a plug-and-play paging solution to work in combination with the AUDAC multi-zone audio matrixes.</p><br>-Push to talk button <br>-Audio transmission via Dante™/AES67 <br>-Fully flexible & configurable touchscreen (from AUDAC Touch™) <br>-Visual user feedback (LED's) <br>-48V phantom power & XLR input that allows the use of various microphones <br>-PoE powered"
   },
   {
     id: 4,
     name: 'WIRELESS CONFERENCE SYSTEM',
     image: process.env.PUBLIC_URL +'/new_product_images/WIRELESS_CONFERENCE_SYSTEM.jpg', 
-    info: "<p>A mixing console or mixing desk is an electronic device for mixing audio signals, used in sound recording and reproduction and sound reinforcement systems. Inputs to the console include microphones, signals from electric or electronic instruments, or recorded sounds. Mixers may control analog or digital signals. The modified signals are summed to produce the combined output signals, which can then be broadcast, amplified through a sound reinforcement system or recorded.</p><p>Mixing consoles are used for applications including recording studios, public address systems, sound reinforcement systems, nightclubs, broadcasting, and post-production. A typical, simple application combines signals from microphones on stage into an amplifier that drives one set of loudspeakers for the audience. A DJ mixer may have only two channels, for mixing two record players. A coffeehouse's tiny stage might only have a six-channel mixer, enough for two singer-guitarists and a percussionist. A nightclub stage's mixer for rock music shows may have 24 channels for mixing the signals from a rhythm section, lead guitar and several vocalists. A mixing console in a professional recording studio may have as many as 96 channels.</p><p>In practice, mixers do more than simply mix signals. They can provide phantom power for condenser microphones; pan control, which changes a sound\'s apparent position in the stereo soundfield; filtering and equalization, which enables sound engineers to boost or cut selected frequencies to improve the sound; dynamic range compression, which allows engineers to increase the overall gain of the system or channel without exceeding the dynamic limits of the system; routing facilities, to send the signal from the mixer to another device, such as a sound recording system or a control room; and monitoring facilities, whereby one of a number of sources can be routed to loudspeakers or headphones for listening, often without affecting the mixer\'s main output.[2] Some mixers have onboard electronic effects, such as reverb. Some mixers intended for small venue live performance applications may include an integrated power amplifier.</p>"
+    info: "<p>A mixing console or mixing desk is an electronic device for mixing audio signals, used in sound recording and reproduction and sound reinforcement systems. Inputs to the console include microphones, signals from electric or electronic instruments, or recorded sounds. Mixers may control analog or digital signals. The modified signals are summed to produce the combined output signals, which can then be broadcast, amplified through a sound reinforcement system or recorded.</p><p>Mixing consoles are used for applications including recording studios, public address systems, sound reinforcement systems, nightclubs, broadcasting, and post-production. A typical, simple application combines signals from microphones on stage into an amplifier that drives one set of loudspeakers for the audience. A DJ mixer may have only two channels, for mixing two record players. A coffeehouse's tiny stage might only have a six-channel mixer, enough for two singer-guitarists and a percussionist. A nightclub stage's mixer for rock music shows may have 24 channels for mixing the signals from a rhythm section, lead guitar and several vocalists. A mixing console in a professional recording studio may have as many as 96 channels.</p><p>In practice, mixers do more than simply mix signals. They can provide phantom power for condenser microphones; pan control, which changes a sound\\'s apparent position in the stereo soundfield; filtering and equalization, which enables sound engineers to boost or cut selected frequencies to improve the sound; dynamic range compression, which allows engineers to increase the overall gain of the system or channel without exceeding the dynamic limits of the system; routing facilities, to send the signal from the mixer to another device, such as a sound recording system or a control room; and monitoring facilities, whereby one of a number of sources can be routed to loudspeakers or headphones for listening, often without affecting the mixer\\'s main output.[2] Some mixers have onboard electronic effects, such as reverb. Some mixers intended for small venue live performance applications may include an integrated power amplifier.</p>"
   },
   {
     id: 5,
@@ -94,12 +95,6 @@ export const productList2=[
 
 const providersList=[
   {
-    id:1,
-    name: 'FONESTAR',
-    image: process.env.PUBLIC_URL +"/providers_images/fonestar.jpg",
-    link:"https://fonestar.com/en/"
-  },
-  {
     id:2,
     name: 'TUTONDO',
     image:process.env.PUBLIC_URL +"/providers_images/tutondo.jpg",
@@ -120,8 +115,8 @@ const providersList=[
 ]
 
 function Products() {
-
   const scrollRef = useScrollAnimation();
+  const { t } = useLanguage();
 
   return (
     <div className='products' ref={scrollRef}>
@@ -131,10 +126,10 @@ function Products() {
           <link rel="canonical" href="/products"/>
         </Helmet>
       <section className='products-main container animate-on-scroll'>
-        <h1>About our products</h1>
+        <h1>{t('products_title')}</h1>
       </section>
       <section className='providers-info container animate-on-scroll'>
-        <p>Our commitment to delivering top-quality audio products is made possible through our esteemed partnerships with renowned providers like Fonestar, Bosch, Sonos, and Tutondo. These industry leaders share our passion for exceptional sound experiences and innovation. Fonestar, with its decades of expertise, brings us cutting-edge audio solutions, while Bosch's reputation for precision engineering ensures our customers enjoy unparalleled reliability. Sonos, a household name in the world of wireless speakers and smart audio, empowers us to offer state-of-the-art sound systems. Tutondo, known for its excellence in public address systems, helps us meet the diverse needs of our clientele. Together with these trusted providers, we're dedicated to elevating your audio experience to new heights.</p>
+        <p>{t('products_providers_desc')}</p>
       </section>
       <section className='providers-list container animate-on-scroll'>
         {providersList.map(provider => (
@@ -147,33 +142,27 @@ function Products() {
             ))}
       </section>
       <section className='products-info container animate-on-scroll'>
-        <p>Discover a world of unparalleled audio excellence at Ace Audio and Conference. Whether you're a sound enthusiast, a professional musician, or a business looking to upgrade your audio equipment, we have you covered. Our extensive catalog features a wide array of audio solutions, including subwoofers that will shake your senses, powerful PA systems for crowd-thrilling performances, cutting-edge sound projectors, high-quality microphones for crystal-clear voice capture, mixer amplifiers for precise audio control, conference systems for seamless communication, premium speakers that deliver breathtaking sound, and innovative translators to bridge language barriers. With a range this diverse, finding the perfect audio solution has never been easier.</p>
-        <p>At Ace Audio and Conference, we take pride in offering only the highest quality audio products. Each item in our collection undergoes rigorous testing to ensure unmatched performance and durability. Whether you're a musician seeking that perfect tone, a business aiming for flawless presentations, or an event organizer striving for top-notch sound quality, you can trust that our products will exceed your expectations. Our commitment to quality extends to every aspect of our business, from our knowledgeable customer support team ready to assist you, to our seamless online shopping experience that makes finding and purchasing the right audio equipment a breeze.</p>
+        <p>{t('products_info_p1')}</p>
+        <p>{t('products_info_p2')}</p>
       </section> 
       <div className="full-width-bg-colored">
         <section className='providers-info container animate-on-scroll'>
           <div className='centered-header'>
-          <h2>Products</h2>
+          <h2>{t('products_section_title')}</h2>
           </div>
         </section>
         <div className="products-containers-container animate-on-scroll">
           <div className="products-container1">
             {productList1.map(product => (
               <div key={product.id} className="product-item">
-                <Link to={`/products/${product.id}`}>
-                  <img src={product.image} alt={product.name} className="product-image" />
                   <h3 className="product-name">{product.name}</h3>
-                </Link>
               </div>
             ))}
           </div>
           <div className="products-container2 animate-on-scroll">
             {productList2.map(product => (
                 <div key={product.id} className="product-item">
-                  <Link to={`/products/${product.id}`}>
-                    <img src={product.image} alt={product.name} className="product-image" />
                     <h3 className="product-name">{product.name}</h3>
-                  </Link>
                 </div>
               ))}
           </div>

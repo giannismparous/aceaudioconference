@@ -1,33 +1,76 @@
+/* ===== ABOUT PAGE ===== */
 .about {
+  margin-top: 80px;
+}
+
+/* ===== ABOUT MAIN HEADER ===== */
+.about-main {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 100px;
+  margin-bottom: 0;
+  text-align: center;
 }
 
-.about-main{
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  border-color: #3498db;
-  border-style: solid;
+.about-main h1 {
+  margin-bottom: 0;
 }
 
+.about-main h1::after {
+  display: none;
+}
+
+/* ===== ABOUT CONTAINER ===== */
 .about-container {
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px; /* Adjust as necessary for your design */
-    background-color: #ffffff; /* Or any other color that fits your brand */
-    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
-    border-radius: 8px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  background: transparent;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* ===== ABOUT TYPOGRAPHY ===== */
+.about h1 {
+  color: var(--text-primary);
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.about p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: var(--spacing-xl);
+    margin-left: var(--spacing-md);
+    margin-right: var(--spacing-md);
   }
-  
-  h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
+
+  .about h1 {
+    font-size: var(--font-size-2xl);
   }
-  
-  p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
+}
+
+@media screen and (max-width: 480px) {
+  .about h1 {
+    font-size: var(--font-size-xl);
   }
-  
+
+  .about p {
+    font-size: var(--font-size-base);
+  }
+}
